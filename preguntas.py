@@ -110,7 +110,7 @@ def pregunta_04():
     #   * Use parada temprana
 
     param_grid = {
-        'mlpregressor__hidden_laye': list(range(1,9)),  
+        'mlpregressor__hidden_layer_sizes': list(range(1,9)),  
         'mlpregressor__activation': ['relu'],  
         'mlpregressor__learning_rate': ['adaptative'],  
         'mlpregressor__momentum': [0.7, 0.8, 0.9],  
@@ -161,7 +161,7 @@ def pregunta_05():
         y_train,  
         y_trian_pred,  
     )
-    mse_test = ____(  
+    mse_test = mean_squared_error(  
         y_test,  
         y_test_pred,  
     )
